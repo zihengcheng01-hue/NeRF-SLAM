@@ -1,0 +1,39 @@
+{
+  "experiment": "Ablation Study on Replica Dataset",
+  "metric": {
+    "PSNR": {"unit": "dB", "higher_is_better": true},
+    "SSIM": {"higher_is_better": true},
+    "LPIPS": {"higher_is_better": false},
+    "FPS": {"unit": "frames/sec", "higher_is_better": true}
+  },
+  "results": [
+    {
+      "configuration": "Baseline (NeRF-SLAM)",
+      "PSNR": 26.71,
+      "SSIM": 0.862,
+      "LPIPS": 0.201,
+      "FPS": 10
+    },
+    {
+      "configuration": "+3DGS Replacement",
+      "PSNR": 27.84,
+      "SSIM": 0.881,
+      "LPIPS": 0.185,
+      "FPS": 18
+    },
+    {
+      "configuration": "+Hybrid Loss",
+      "PSNR": 28.31,
+      "SSIM": 0.896,
+      "LPIPS": 0.176,
+      "FPS": 15
+    },
+    {
+      "configuration": "+Adaptive Density Control",
+      "PSNR": 28.53,
+      "SSIM": 0.904,
+      "LPIPS": 0.172,
+      "FPS": 15
+    }
+  ]
+}
